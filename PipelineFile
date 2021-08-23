@@ -12,18 +12,18 @@ pipeline {
 				bat 'Build.bat'
 			}
 		}
-    stage('Unit-Testing') {
-      steps{
-        echo "Unit-Testing executing in Windows_Slave"
-        bat 'Unit.bat'
-      }
-
-    stage('Quality-Test') {
-      steps{
-        echo "Quality-Testing executing in master"
-        bat 'Quality.bat'
-      }
-    }
+		stage('Unit-Testing') {
+		  steps{
+			echo "Unit-Testing executing in Windows_Slave"
+			bat 'Unit.bat'
+		  }
+		}
+		stage('Quality-Test') {
+		  steps{
+			echo "Quality-Testing executing in master"
+			bat 'Quality.bat'
+		  }
+		}
 		stage('Deploy') {
 			steps{
 				bat 'Deploy.bat'
